@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Planner</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/indexStyle.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/aboutposts.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/todoRegisterStyle.css">
+ 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="/Jquery/lib/jquery.min.js"></script>
+ 
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Todos</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="todoForm"  class="container">
+        <h1>Task Register</h1>
+        <!-- Form -->
+        <form method="POST">
+          <div class="js-form-message form-group mb-3">
+            <input type="text" class="form-control" name="title" placeholder="Title" required>
+          </div>
+          <div class="js-form-message form-group mb-3">
+            <textarea class="form-control" rows="5" name="description" placeholder="Todo's description !" 
+                data-msg="Please enter your message."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"></textarea>
+          </div>
+          <div class="js-form-message form-group mb-3">
+            <input type="date" class="form-control" name="due" placeholder="Due Date" required>
+          </div>
+          <select class="custom-select mb-3" name="priority">
+            <option selected>Priority</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+          <div class="js-form-message form-group mb-3">
+            <label class="mr-4">
+            <input type="radio" class="form-check-input" name="status" value="complete">Status complete
+          </label>
+          <label>
+            <input type="radio" class="form-check-input" name="status" value="incomplete">Status incomplete
+          </label>
+          </div>
+          
+          <div class="d-flex justify-content-center mt-3">
+            <button type="submit" class="btn btn-primary btn-wide transition-3d-hover">Add Task</button>
+          </div>
+        </form>
+    </div>
+
+<script type="text/javascript" src="/Jquery/aboutposts.js"></script>
+</body>
+</html>
