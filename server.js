@@ -2,6 +2,7 @@ const express = require('express')
 const ejs = require('ejs')
  const { db } = require('./models/todos')
  const methodOverride = require('method-override')
+ const port = process.env.PORT||1992
 
 
 const app = express()
@@ -15,7 +16,7 @@ app.use(methodOverride('_method'))
 app.use('/todos',todoRoute)
 
 db.sync().then(() => {
-    app.listen(1992)
+    app.listen(port)
 }).catch((err) => {
     console.error(err)
 })
