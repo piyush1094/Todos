@@ -12,7 +12,7 @@ app.use(express.json())
 app.set("view engine","ejs");
 app.use(express.static("public"))
 app.use(methodOverride('_method'))
-app.use('/',todoRoute)
+app.use('/todos',todoRoute)
 
 db.sync().then(() => {
     app.listen(1992)

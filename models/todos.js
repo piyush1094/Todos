@@ -25,7 +25,8 @@ const Todos = db.define('todo',{
         allowNull : false,
     },
     status: {
-        type: sequelize.STRING(100)
+        type: sequelize.STRING(100),
+        defaultValue : 'Incomplete'
     },
     priority: {
         type : sequelize.STRING(100),
@@ -34,17 +35,22 @@ const Todos = db.define('todo',{
     }
 })
 
-// function validation(user){
-//     const schema={
-//         title: Joi.string().max(100).required(),
-//         description: Joi.string().max(200),
-//         due : Joi.date().required()
-//     }
- 
-//     return Joi.validate(user,schema);
-// }
+const Notes = db.define('note',{
+    id: {
+        type : sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement : true
+    },
+    taskId : {
+        type: sequelize.INTEGER,
+        allowNull : false
+    },
+    description : {
+        type : sequelize.STRING(400),
+    }
+})
     
 exports.db=db;
-// exports.todoValidation=validation;
+exports.Notes=Notes;
 exports.Todos=Todos;
 

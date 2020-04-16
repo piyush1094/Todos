@@ -19,7 +19,7 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">Todos</a>
+                <a class="navbar-brand" href="/todos">Tasks</a>
             </div>
         </div>
     </nav>
@@ -28,7 +28,7 @@
     <div id="todoForm"  class="container">
         <h1>Edit Task</h1>
         <!-- Form -->
-        <form action="/<%=todo.id%>?_method=PATCH" method="POST"> 
+        <form action="/todos/<%=todo.id%>?_method=PATCH" method="POST"> 
           <div class="js-form-message form-group mb-3">
             <input type="text" class="form-control" name="title" placeholder="Title" value="<%=todo.title%>" required>
           </div>
